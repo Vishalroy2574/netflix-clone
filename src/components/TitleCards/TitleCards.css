@@ -1,0 +1,53 @@
+.title-cards {
+  margin-top: 50px;
+  margin-bottom: 30px;
+  padding: 10px 20px;
+}
+
+.title-cards h2 {
+  margin-bottom: 8px;
+  color: white;
+}
+
+.card-list {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  width: 100vw;
+  padding-bottom: 10px;
+  scroll-behavior: smooth;
+}
+
+.card-list::-webkit-scrollbar {
+  display: none;
+}
+
+.card {
+  flex: 0 0 auto;
+  width: 300px;
+  height: 170px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  margin-right: 15px;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.card p {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 4px 8px;
+  font-size: 14px;
+  border-radius: 4px;
+}
