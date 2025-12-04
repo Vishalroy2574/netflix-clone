@@ -9,14 +9,19 @@
   color: white;
 }
 
+.card-list-wrapper{
+  position: relative;
+}
+
 .card-list {
   display: flex;
-  gap: 10px;
+  gap: 18px;
   overflow-x: auto;
   overflow-y: hidden;
-  width: 100vw;
+  width: 100%; /* use container width to avoid creating horizontal overflow */
   padding-bottom: 10px;
   scroll-behavior: smooth;
+  padding-left: 4px;
 }
 
 .card-list::-webkit-scrollbar {
@@ -29,8 +34,7 @@
   height: 170px;
   position: relative;
   overflow: hidden;
-  border-radius: 8px;
-  margin-right: 15px;
+  border-radius: 12px;
 }
 
 .card img {
@@ -38,7 +42,7 @@
   height: 100%;
   object-fit: cover;
   cursor: pointer;
-  border-radius: 8px;
+  border-radius: 12px;
 }
 
 .card p {
@@ -47,7 +51,47 @@
   right: 10px;
   color: white;
   background-color: rgba(0, 0, 0, 0.5);
-  padding: 4px 8px;
+  padding: 6px 10px;
   font-size: 14px;
-  border-radius: 4px;
+  border-radius: 6px;
+}
+
+/* navigation arrows (left/right) */
+.nav-arrow{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  width: 44px;
+  height: 88px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.2s ease, background 0.2s ease;
+}
+
+.title-cards:hover .nav-arrow{opacity:1}
+
+.nav-arrow.prev{left: 4px}
+.nav-arrow.next{right: 4px}
+
+.nav-arrow:hover{background: rgba(0,0,0,0.75)}
+
+/* responsive card sizing */
+@media (max-width: 1200px){
+  .card{width: 260px; height: 150px}
+}
+@media (max-width: 900px){
+  .card{width: 220px; height: 140px}
+}
+@media (max-width: 600px){
+  .card{width: 160px; height: 100px}
+  .nav-arrow{display:none}
 }

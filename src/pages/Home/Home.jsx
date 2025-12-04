@@ -29,11 +29,12 @@ function Home() {
               More Info
             </button>
           </div>
-          <TitleCards title="Now Playing" category="now_playing" />
+          {/* Now Playing moved below hero to avoid layout issues from the absolutely-positioned caption */}
         </div>
       </div>
 
       <div className="more-cards">
+        <TitleCards title="Now Playing" category="now_playing" />
         <TitleCards title="Trending Now" category="trending" />
         <TitleCards title="Blockbuster Movies" category="popular" />
         <TitleCards title="Upcoming" category="upcoming" />

@@ -9,11 +9,45 @@ const Footer = () => {
   return (
     <div className='footer'>
       <div className="footer-icons">
-        <img src={facebook_icon} alt=""/>
-         <img src={instagram_icon} alt=""/>
-        <img src={twitter_icon} alt=""/>
-         <img src={youtube_icon} alt=""/> 
+
+        {/* Facebook */}
+        <a 
+          href="https://www.facebook.com/profile.php?id=100015089837481" 
+          target="_blank" 
+          rel="noopener noreferrer"
+        >
+          <img src={facebook_icon} alt="Facebook"/>
+        </a>
+
+        {/* Instagram */}
+        <a 
+          href="https://www.instagram.com/__vishal_roy_74__/?hl=en" 
+          target="_blank" 
+          rel="noopener noreferrer"
+        >
+          <img src={instagram_icon} alt="Instagram"/>
+        </a>
+
+        {/* Twitter/X */}
+        <a 
+          href="https://twitter.com/login" 
+          target="_blank" 
+          rel="noopener noreferrer"
+        >
+          <img src={twitter_icon} alt="Twitter"/>
+        </a>
+
+        {/* YouTube */}
+        <a 
+          href="https://www.youtube.com/signin" 
+          target="_blank" 
+          rel="noopener noreferrer"
+        >
+          <img src={youtube_icon} alt="YouTube"/>
+        </a>
+
       </div>
+
       <ul>
         <li>Audio Description</li>
         <li>Help Centre</li>
@@ -28,7 +62,8 @@ const Footer = () => {
         <li>Corporate Information</li>
         <li>Contact Us</li>
       </ul>
-      <p className='copyright-text'>@ 1997-2023</p>
+
+      <p className='copyright-text'>© 1997-2023</p>
     </div>
   )
 }
